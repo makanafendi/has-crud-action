@@ -1,0 +1,9 @@
+.idea
+.phpunit.cache
+build
+composer.lock
+coverage
+docs
+vendor
+node_modules
+.phpactor.json

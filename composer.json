@@ -1,0 +1,59 @@
+{
+    "name": "smartpos/has-crud-action",
+    "version": "1.0.0",
+    "description": "Has-CRUD-Action is a Laravel package that simplifies adding CRUD (Create, Read, Update, Delete) operations to your models.",
+    "keywords": [
+        "smartpos",
+        "has-crud-action",
+        "crud-generator",
+        "crud-builder"
+    ],
+    "homepage": "https://github.com/makanafendi/has-crud-action",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "makanafendi",
+            "email": "makanafendip@gmail.com",
+            "role": "Owner"
+        }
+    ],
+    "require": {
+        "php": "^8.2",
+        "illuminate/support": "^11.9",
+        "spatie/laravel-query-builder": "^6.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^9.0",
+        "phpunit/phpunit": "^10.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "SmartPOS\\HasCrudAction\\": "src",
+            "App\\": "app"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SmartPOS\\HasCrudAction\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SmartPOS\\HasCrudAction\\HasCrudActionServiceProvider"
+            ],
+            "aliases": {
+                "HasCrudAction": "SmartPOS\\HasCrudAction\\HasCrudActionFacade"
+            }
+        }
+    }
+}
